@@ -523,6 +523,20 @@ nav {
     color: var(--muted-color);
 }
 
+.real-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.real-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
 .image-placeholder i {
     font-size: 6rem;
     margin-bottom: 20px;
