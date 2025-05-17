@@ -412,7 +412,15 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="js/scripts.js"></script>
+    <!-- Audio Player -->
+    <audio id="background-music" loop>
+        <source src="audio/background-music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class="audio-controls">
+        <button onclick="document.getElementById('background-music').play()">Play Music</button>
+        <button onclick="document.getElementById('background-music').pause()">Pause Music</button>
+    </div>
 </body>
 </html>

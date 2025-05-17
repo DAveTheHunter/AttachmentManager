@@ -930,11 +930,40 @@ button {
     font-family: var(--body-font);
 }
 
-/* ======= 8. Footer ======= */
+/* ======= 8. Footer and Audio ======= */
 footer {
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 70px 0 20px;
+}
+
+/* Audio Controls */
+.audio-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.audio-controls button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.audio-controls button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
 .footer-content {
