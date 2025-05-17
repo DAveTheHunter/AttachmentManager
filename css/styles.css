@@ -505,6 +505,13 @@ nav {
     align-items: center;
 }
 
+.about-section .about-content.full-width {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .image-placeholder {
     background-color: #e9ecef;
     border-radius: 10px;
