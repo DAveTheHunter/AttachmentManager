@@ -1,0 +1,438 @@
+/* 
+* Horizon Digital Solutions - Animations
+* CSS animations and transitions for enhanced user experience
+*/
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.fade-in:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.fade-in:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.fade-in:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth scroll effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Card hover effects */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover .service-icon {
+    animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Button hover effects */
+.btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+.btn:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Navigation link hover effect */
+.nav-links a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Form input focus effect */
+input, textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+}
+
+/* Social icons hover effect */
+.social-links a {
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px) rotate(5deg);
+}
+
+/* Team member card hover effect */
+.team-member {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Service detail hover effect */
+.service-list li {
+    transition: transform 0.3s ease;
+}
+
+.service-list li:hover {
+    transform: translateX(5px);
+}
+
+/* Process step hover effect */
+.process-step {
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateX(5px);
+}
+
+.process-step:hover .step-number {
+    animation: pulse 1s ease;
+}
+
+/* Testimonial hover effect */
+.testimonial {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for suggestion links on 404 page */
+.suggestion-links a {
+    transition: all 0.3s ease;
+}
+
+.suggestion-links a:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-links a:hover i {
+    animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* 404 page animations */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Services section icon effects */
+.service-icon i {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon i {
+    transform: scale(1.2);
+}
+
+/* Timeline dot effect */
+.timeline-dot {
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.5);
+    box-shadow: 0 0 0 5px rgba(58, 134, 255, 0.2);
+}
+
+/* Mission/Vision/Values section hover effect */
+.mission, .vision, .values {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission:hover, .vision:hover, .values:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mission:hover .mission-icon, 
+.vision:hover .vision-icon, 
+.values:hover .values-icon {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+/* Stats counter hover effect */
+.stat {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat:hover i {
+    animation: spin 1s ease;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Read more link hover effect */
+.read-more {
+    transition: all 0.3s ease;
+}
+
+.read-more i {
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover i {
+    transform: translateX(5px);
+}
+
+/* Form submit button effect */
+button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+}
+
+button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover::before {
+    left: 100%;
+}
+
+/* Hamburger menu animation */
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger span {
+    transition: all 0.3s ease;
+}
+
+/* Logo hover effect */
+.logo-text {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.logo:hover .logo-text {
+    color: var(--primary-dark);
+    text-shadow: 0 0 10px rgba(58, 134, 255, 0.3);
+}
+
+/* Footer link hover effect */
+.footer-section ul li a {
+    transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    padding-left: 5px;
+}
+
+/* CTA button hover effect */
+.cta .btn {
+    transition: all 0.3s ease;
+}
+
+.cta .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Page header animation */
+.page-header h1 {
+    animation: fadeDown 1s ease;
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section header animation */
+.section-header {
+    animation: fadeIn 1s ease;
+}
+
+/* Image placeholder hover effect */
+.image-placeholder {
+    transition: all 0.3s ease;
+}
+
+.image-placeholder:hover {
+    background-color: #dde1e7;
+}
+
+.image-placeholder:hover i {
+    animation: pulse 1s ease infinite;
+}
+
+/* Mobile menu overlay effect */
+.nav-links {
+    transition: right 0.3s ease;
+}
+
+/* Timeline animation */
+.timeline-item {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.5s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-item:nth-child(even) {
+    transform: translateX(50px);
+}
+
+.timeline-item:nth-child(even).visible {
+    transform: translateX(0);
+}
