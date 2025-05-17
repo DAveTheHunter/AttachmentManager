@@ -279,10 +279,28 @@ nav {
     opacity: 0.1;
 }
 
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 600px;
+    max-width: 500px;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    margin-left: 50px;
+}
+
+.hero-svg {
+    width: 100%;
+    height: auto;
 }
 
 .hero h1 {
@@ -549,6 +567,18 @@ nav {
 .real-svg:hover {
     transform: scale(1.03);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-svg {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.team-member:hover .team-svg {
+    transform: scale(1.03);
 }
 
 .image-placeholder i {
@@ -1331,6 +1361,21 @@ footer {
 @media (max-width: 768px) {
     html {
         font-size: 58%;
+    }
+    
+    .hero .container {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .hero-image {
+        width: 100%;
+        margin-left: 0;
     }
     
     .container {
